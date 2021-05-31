@@ -30,7 +30,9 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+    
 }
+
 javafx {
     modules = [ 'javafx.controls', 'javafx.fxml' ]
     configuration = 'compileOnly'

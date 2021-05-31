@@ -30,7 +30,7 @@ public class login {
 			errormsg.setText("Success!");
 			errormsg.setTextFill(Color.GREEN);
 
-            m.changeScene("afterLogin.fxml");
+//            m.changeScene("afterLogin.fxml");
         }
 
         else if(emailAddress.getText().isEmpty() && password.getText().isEmpty()) {

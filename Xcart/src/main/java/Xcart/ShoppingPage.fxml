@@ -18,7 +18,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ShoppingPage">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Xcart.Controller.ShoppingPage">
    <children>
       <BorderPane prefHeight="600.0" prefWidth="868.0">
          <left>
@@ -38,12 +38,12 @@
                      <children>
                         <HBox prefHeight="57.0" prefWidth="260.0">
                            <children>
-                              <Label fx:id="fruitName" alignment="CENTER" prefHeight="40.0" prefWidth="156.0" text="Kiwi" textFill="WHITE">
+                              <Label fx:id="fruitNameLabel" alignment="CENTER" prefHeight="40.0" prefWidth="156.0" text="Kiwi" textFill="WHITE">
                                  <font>
                                     <Font size="21.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="fruitPrice" alignment="CENTER" prefHeight="43.0" prefWidth="148.0" text="250Rs" textAlignment="RIGHT" textFill="WHITE">
+                              <Label fx:id="fruitPriceLabel" alignment="CENTER" prefHeight="43.0" prefWidth="148.0" text="250Rs" textAlignment="RIGHT" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="21.0" />
                                  </font>
@@ -52,7 +52,7 @@
                         </HBox>
                         <ImageView fx:id="fruitImg" fitHeight="166.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="29.0">
                            <image>
-                              <Image url="file:/C:/Users/HP-PC/git/Xcart-java/Xcart/src/main/java/Xcart/imgs/kiwi.png" />
+                              <Image url="file:/C:/Users/HP-PC/git/Xcart-java/Xcart/src/main/java/Xcart/img/kiwi.png" />
                            </image>
                         </ImageView>
                         <Pane prefHeight="19.0" prefWidth="260.0" />
@@ -64,7 +64,7 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <ComboBox prefHeight="45.0" prefWidth="132.0" style="-fx-background-color: #63786c;" />
+                              <ComboBox prefHeight="45.0" prefWidth="132.0" promptText="1" style="-fx-background-color: #63786c;" visibleRowCount="5" />
                               <Pane prefHeight="44.0" prefWidth="14.0" />
                            </children>
                         </HBox>
@@ -73,6 +73,9 @@
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </Button>
                      </children>
                   </VBox>
@@ -164,9 +167,9 @@
                   </HBox>
                   <HBox prefHeight="480.0" prefWidth="608.0">
                      <children>
-                        <ScrollPane prefHeight="470.0" prefWidth="614.0" style="-fx-background-color: white;">
+                        <ScrollPane fx:id="scroll" prefHeight="470.0" prefWidth="614.0" style="-fx-background-color: white;">
                            <content>
-                              <GridPane prefHeight="6.0" prefWidth="0.0" style="-fx-background-color: white;">
+                              <GridPane fx:id="grid" prefHeight="6.0" prefWidth="0.0" style="-fx-background-color: white;">
                                 <columnConstraints>
                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                 </columnConstraints>
