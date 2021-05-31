@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ShoppingPage">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="868.0">
+         <left>
+            <VBox prefHeight="570.0" prefWidth="260.0" style="-fx-background-color: #4F6056;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="126.0" prefWidth="260.0">
+                     <children>
+                        <ImageView fitHeight="113.0" fitWidth="206.0" pickOnBounds="true" preserveRatio="true" translateX="23.0" translateY="7.0">
+                           <image>
+                              <Image url="file:/C:/Users/HP-PC/git/Xcart-java/Xcart/src/main/resources/Xcart.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="52.0" prefWidth="260.0" />
+                  <VBox prefHeight="424.0" prefWidth="260.0">
+                     <children>
+                        <HBox prefHeight="57.0" prefWidth="260.0">
+                           <children>
+                              <Label fx:id="fruitName" alignment="CENTER" prefHeight="40.0" prefWidth="156.0" text="Kiwi" textFill="WHITE">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fruitPrice" alignment="CENTER" prefHeight="43.0" prefWidth="148.0" text="250Rs" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="fruitImg" fitHeight="166.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateX="29.0">
+                           <image>
+                              <Image url="file:/C:/Users/HP-PC/git/Xcart-java/Xcart/src/main/java/Xcart/imgs/kiwi.png" />
+                           </image>
+                        </ImageView>
+                        <Pane prefHeight="19.0" prefWidth="260.0" />
+                        <HBox prefHeight="44.0" prefWidth="260.0">
+                           <children>
+                              <Pane prefHeight="44.0" prefWidth="14.0" />
+                              <Label prefHeight="44.0" prefWidth="108.0" text="Kg" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox prefHeight="45.0" prefWidth="132.0" style="-fx-background-color: #63786c;" />
+                              <Pane prefHeight="44.0" prefWidth="14.0" />
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="44.0" prefWidth="260.0" />
+                        <Button fx:id="addToCartBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="44.0" prefWidth="197.0" style="-fx-background-color: #fbff29;" text="Add to cart" textAlignment="CENTER" translateX="29.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="437.0" prefWidth="582.0" style="-fx-background-color: #63786c;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="41.0" prefWidth="602.0">
+                     <children>
+                        <Pane prefHeight="31.0" prefWidth="456.0" />
+                        <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="82.0" style="-fx-background-color: #63786c;" text="Checkout" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fitHeight="50.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/C:/Users/HP-PC/git/Xcart-java/Xcart/src/main/java/Xcart/cart-icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="cartCount" alignment="CENTER" prefHeight="21.0" prefWidth="27.0" text="0" textAlignment="CENTER" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="-35.0" top="9.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="82.0" prefWidth="608.0" style="-fx-background-color: green;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="What's New?" textAlignment="CENTER" translateX="18.0" wrappingWidth="179.61328125">
+                           <font>
+                              <Font name="Segoe UI Black" size="27.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Checkout our new inventory!" translateX="-138.0">
+                           <HBox.margin>
+                              <Insets top="53.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Segoe UI Semibold" size="11.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="132.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" translateX="-92.0">
+                           <image>
+                              <Image url="file:/C:/Users/HP-PC/git/Xcart-java/Xcart/src/main/java/Xcart/new-item.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="82.0" prefWidth="221.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Lockdown Timings:" translateY="3.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Mon-Thurs:" translateY="10.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Fri-Sun:" translateY="14.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#fbff29" strokeType="OUTSIDE" strokeWidth="0.0" text="12:00PM - 8:00PM" translateX="71.0" translateY="-21.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#fbff29" strokeType="OUTSIDE" strokeWidth="0.0" text="12:00PM - 4:00PM" translateX="70.0" translateY="-17.0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="480.0" prefWidth="608.0">
+                     <children>
+                        <ScrollPane prefHeight="470.0" prefWidth="614.0" style="-fx-background-color: white;">
+                           <content>
+                              <GridPane prefHeight="6.0" prefWidth="0.0" style="-fx-background-color: white;">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

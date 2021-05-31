@@ -3,13 +3,16 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.google.api.core.ApiFuture;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.firestore.CollectionReference;
 import com.google.cloud.firestore.DocumentReference;
+import com.google.cloud.firestore.DocumentSnapshot;
 import com.google.cloud.firestore.Firestore;
 import com.google.cloud.firestore.WriteResult;
 import com.google.firebase.FirebaseApp;
@@ -40,10 +43,8 @@ public class FirebaseDB {
 		// result.get() blocks on response
 		System.out.println("Update time : " + addedDocRef.get().getId());
 	}
-	
-	public void fetchUserData() throws FirebaseAuthException {
-		UserRecord userRecord = FirebaseAuth.getInstance().getUser("117514499863367374545");
-		// See the UserRecord reference doc for the contents of userRecord.
-		System.out.println("Successfully fetched user data: " + userRecord.getUid());
+	public void retrieveData() throws Exception {
+		CollectionReference fruits = db.collection("fruits");
+		List<ApiFuture<WriteResult>> futures = new ArrayList<>();
 	}
 }
